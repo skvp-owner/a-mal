@@ -27,20 +27,20 @@ The solution uses SKVP formatted skeleton 3D video files. The SKVP format is det
 
 ## Usage
 ### Training a Model
-The training algorithm requires a directory of SKVP formatted **properly-performed** motions of the same type. Given such a directory, the training command is:
+The training algorithm requires a directory of SKVP formatted videos of **properly-performed** motions of the same type. Given such a directory, the training command is:
 ```
 python run_amal.py train <input directory of videos> <output learned model file> [warping method] [ablations] [reference video output path]
 ```
 Example: `python run_amal.py train /path/to/my_training_videos /path/to/trained_model.txt`
 
-* The warping method default value is "our", as described in the paper. It can be overridden by "none" and "dtw". Using the "dtw option will require installation of the [simpledtw](https://github.com/talcs/simpledtw) module
+* The warping method default value is "our", as described in the paper. It can be overridden by "none" and "dtw". Using the "dtw" option will require installation of the [simpledtw](https://github.com/talcs/simpledtw) module.
 
-* The ablations default value is "none". It can be overridden using one or more ablation types, separated by a comma. The possible ablations are: `none, active, segmentation, time, diminish`. A possible ablations argumemt value can be `active,time`.
+* The ablations default value is "none". It can be overridden using one or more ablation types, separated by commas. The possible ablations are: `none, active, segmentation, time, diminish`. For example, a possible ablations argumemt value can be `active,time`.
 
-* The reference video output path is only relevant when warping with `dtw` method, as the assessment flow will need a reference video to be aligned to (while our default warping method does not need one, as it relies on pre-computed points of interest)
+* The reference video output path is only useful when warping with "dtw" method, as the assessment flow will need a reference video to be aligned to (while our default warping method does not need one, as it relies on pre-computed points of interest).
 
 ### Assessing Motions
-The assessment algorithm requires a pretrained model file and an SKVP formatted motion of the same type as used for training the model. Given these two inputs, the assessment command is:
+The assessment algorithm requires a pretrained model file and an SKVP formatted video of a motion of the same type as used for training the model. Given these two inputs, the assessment command is:
 ```
 python run_amal.py test <input model file> <input video file> [warping method] [ablations] [input reference video file]
 ```
