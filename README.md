@@ -46,7 +46,7 @@ python run_amal.py test <input model file> <input video file> [warping method] [
 ```
 Example: `python run_amal.py test /path/to/trained_model.txt /path/to/a_video_i_want_to_assess.skvp`
 
-Sample output:
+#### Sample output:
 ```
 FEEDBACK: The angle between the right shoulder and the right wrist, through the right elbow, is too acute, from 0.00s to 1.87s
 FEEDBACK: The right hand tip is too left, from 0.60s to 1.80s
