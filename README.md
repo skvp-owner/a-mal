@@ -52,7 +52,7 @@ FEEDBACK: The angle between the right shoulder and the right wrist, through the 
 FEEDBACK: The right hand tip is too left, from 0.60s to 1.80s
 FEEDBACK: The right hand is too left, from 0.67s to 1.73s
 FEEDBACK: The right wrist is too left, from 0.67s to 1.73s
-Grades: Active: 0.784891, NonActive: 0.757188, Time: 1.000000
-Grade: 0.838114
+Scores: Active: 0.784891, NonActive: 0.757188, Time: 1.000000
+Score: 0.838114
 ```
-According to the above output, the final grade is 83.8%. The grade components are listed as well, which refer to the active-joint related, inactive-joint related and time-related parameters. In addition, 4 feedback items are printed.
+According to the above output, the final score is 83.8%. The score components are listed as well, which refer to the active-joint related, inactive-joint related and time-related parameters. In addition, 4 feedback items are printed.

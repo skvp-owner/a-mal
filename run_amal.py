@@ -402,10 +402,10 @@ def test(model_file, input_video_file, warp_mode, ablation, ref_vid_path):
 	nonactive_joint_score = max(0, 1.0 - abs(sum(s['cost'] for s in costed_nonactive_joint_stats if s['cost'] > 0) / (scorelambda * len([s['cost'] for s in costed_nonactive_joint_stats]))))
 	time_score = max(0, 1.0 - abs(sum(s['cost'] for s in costed_time_stats if s['cost'] > 2.5) / (scorelambdatime * len([s['cost'] for s in costed_time_stats]))))
 	
-	print('Grades: Active: {0:f}, NonActive: {1:f}, Time: {2:f}'.format(active_joint_score, nonactive_joint_score, time_score))
+	print('Scores: Active: {0:f}, NonActive: {1:f}, Time: {2:f}'.format(active_joint_score, nonactive_joint_score, time_score))
 	final_score = active_joint_score * group_weights['ActiveJoint'] + nonactive_joint_score * group_weights['NonActiveJoint'] + time_score * group_weights['Time']
 	
-	print('Grade: {0:f}'.format(final_score))
+	print('Score: {0:f}'.format(final_score))
 
 def fixed_std(vals):
 	var = np.var(vals) * len(vals) / float(len(vals) - 1.0)
