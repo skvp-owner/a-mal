@@ -1,8 +1,6 @@
 # A-MAL - Automatic Motion Assessment Learning
 
-This repository contains Python code for the algorithm described in the paper:
-
-Tal Hakim and Ilan Shimshoni. **A-MAL: Automatic Motion Assessment Learning from Properly Performed Motions in 3D Skeleton Videos**.
+This repository contains Python code for the algorithm described in the paper [**A-MAL: Automatic Motion Assessment Learning from Properly Performed Motions in 3D Skeleton Videos**](https://arxiv.org/pdf/1907.10004.pdf), by Tal Hakim and Ilan Shimshoni.
 
 ### Citation
 Please cite the paper if you have found A-MAL helpful for your research, as:
