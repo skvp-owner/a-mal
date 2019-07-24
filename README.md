@@ -10,7 +10,7 @@ Please cite the paper if you have found A-MAL helpful for your research, as:
 @article{hakim2019amal,
   title={A-MAL: Automatic Motion Assessment Learning from Properly Performed Motions in 3D Skeleton Videos},
   author={Hakim, Tal and Shimshoni, Ilan},
-  journal={arXiv preprint arXiv:ADD_NUMBER},
+  journal={arXiv preprint arXiv:1907.10004},
   year={2019}
 }
 ```
