@@ -344,26 +344,19 @@ def test(model_file, input_video_file, warp_mode, ablation, ref_vid_path):
 			print('stat is: {0}'.format(str(stat)))
 			print('val is: {0}'.format(str(val)))
 			print('mean is: {0}'.format(str(stat['mean'])))
-		if stat['dist_std'] == 0:
-			if dist - stat['dist_mean'] == 0:
-				dist_in_stds = 0
-			else:
-				dist_in_stds = np.inf
-		else:
-			dist_in_stds = (dist - stat['dist_mean']) / stat['dist_std']
+		dist_in_stds = (dist - stat['dist_mean']) / (stat['dist_std'] + 0.0005)
 		stat['cost'] = dist_in_stds
 		stat['test_val'] = val
 	costed_stats = [s for s in stats if 'cost' in s]# and s['type'] == 'joint_angles']
 	costed_active_joint_stats = [s for s in costed_stats if s['type_group'] == 'ActiveJoint']
 	costed_nonactive_joint_stats = [s for s in costed_stats if s['type_group'] == 'NonActiveJoint']
 	costed_time_stats = [s for s in costed_stats if s['type_group'] == 'Time']
-	lambdaa = 2
 	group_to_stats = {'Time' : costed_time_stats, 'ActiveJoint' : costed_active_joint_stats, 'NonActiveJoint' : costed_nonactive_joint_stats}
 	
 	feedback_items, avg_active_bad_segment_length, avg_param_num_active_segments, avg_param_num_nonactive_segments = produce_feedback(costed_stats, group_weights, ablation)
 	
-	scorelambda = 2.9
-	scorelambdatime = 7.5
+	scorelambda = 1.0
+	scorelambdatime = 1.0
 	
 	
 	
