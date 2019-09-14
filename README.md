@@ -15,7 +15,7 @@ Please cite the paper if you have found A-MAL helpful for your research, as:
 
 **Note**: We are checking the legality options for making the dataset demonstrated in the paper public. For now, the code is available for usage on user data.
 
-## Prereqisite
+## Prerequisite
 * Python 3 
 * Numpy and Scipy
 * [SKVP-Python](https://github.com/skvp-owner/SKVP-Python)
