@@ -5,10 +5,11 @@ This repository contains Python code for the algorithm described in the paper [*
 ### Citation
 Please cite the paper if you have found A-MAL helpful for your research, as:
 ```
-@article{hakim2019amal,
+@inproceedings{hakim2019mal,
   title={A-MAL: Automatic Motion Assessment Learning from Properly Performed Motions in 3D Skeleton Videos},
   author={Hakim, Tal and Shimshoni, Ilan},
-  journal={arXiv preprint arXiv:1907.10004},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision Workshops},
+  pages={0--0},
   year={2019}
 }
 ```
